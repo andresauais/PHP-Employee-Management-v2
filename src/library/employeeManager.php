@@ -1,6 +1,6 @@
 <?php
 
-define("DATABASE_PATH", $_SERVER["DOCUMENT_ROOT"] . "/PHP-EmployeeManagement/php-employee-management-v1/resources/employees.json");
+define("DATABASE_PATH", "../../resources/employees.json");
 
 function add(array $newEmployee)
 {
@@ -69,7 +69,7 @@ function get(string $id)
 function getAll()
 {
     try {
-        $string  = file_get_contents(DATABASE_PATH);
+        $string  = file_get_contents("../../resources/employees.json");
         return $string;
     } catch (Exception $e) {
         echo 'Excepción capturada: ',  $e->getMessage(), "\n";

@@ -35,7 +35,7 @@ include('../assets/html/header.html');
         var employees = [];
         $.ajax({
             type: "GET",
-            url: "http://localhost/PHP-EmployeeManagement/php-employee-management-v1/src/library/employeeController.php",
+            url: "./library/employeeController.php",
             dataType: "json",
         }).done(function(response) {
             employees = response;
@@ -70,7 +70,7 @@ include('../assets/html/header.html');
                     console.log(args.item);
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost/php-employee-management-v1/src/library/employeeController.php",
+                        url: "./library/employeeController.php",
                         data: args.item,
                         dataType: "json",
                     });
@@ -80,7 +80,7 @@ include('../assets/html/header.html');
                     console.log(args.item);
                     $.ajax({
                         type: "DELETE",
-                        url: "http://localhost/php-employee-management-v1/src/library/employeeController.php",
+                        url: "./src/library/employeeController.php",
                         data: args.item,
                         dataType: "json",
                     });

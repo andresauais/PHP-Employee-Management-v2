@@ -5,7 +5,7 @@
 
 //call loginManager functions
 require_once('loginManager.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/PHP-EmployeeManagement/php-employee-management-v1/src/library/sessionHelper.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/src/library/sessionHelper.php');
 $emailInput = $_POST["emailInput"];
 $passwordInput = $_POST["passwordInput"];
 
@@ -17,7 +17,7 @@ function logIn($email, $password)
     $_SESSION["password"] = $password;
     $_SESSION["startTime"] = time();
     $_SESSION["limitTime"] = $_SESSION["startTime"] + 600;
-    header('Location: http://localhost/PHP-EmployeeManagement/php-employee-management-v1/src/dashboard.php');
+    header('Location: http://localhost:'.$_SERVER['SERVER_PORT'].'/src/dashboard.php');
     exit;
 }
 

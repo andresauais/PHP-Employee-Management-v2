@@ -35,7 +35,7 @@ function redirectionToLogin($cause)
             logOut();
             break;
     }
-    header('Location: http://localhost/PHP-EmployeeManagement/php-employee-management-v1/index.php?logoutMsg=' . $mns . '&logoutType=' . $type . '');
+    header('Location: http://localhost:' . $_SERVER['SERVER_PORT']. '/index.php?logoutMsg=' . $mns . '&logoutType=' . $type . '');
     exit;
 }
 

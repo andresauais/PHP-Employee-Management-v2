@@ -37,7 +37,7 @@ function updateOrCreateEmployee(e, typeRequest="PUT", id){
         Object.assign(data, {"id":id});
     }
     $.ajax({
-        url: "http://localhost/php-employee-management-v1/src/library/employeeController.php",
+        url: "../../src/library/employeeController.php",
         type: typeRequest,
         data: data,
         dataType: "json"
@@ -55,7 +55,7 @@ function deleteEmployee(employeeId){
         Object.assign(data, {"id":employeeId});
     }
     $.ajax({
-        url: "http://localhost/php-employee-management-v1/src/library/employeeController.php",
+        url: "../../src/library/employeeController.php",
         type: "DELETE",
         data: data,
         dataType: "json"
@@ -73,7 +73,7 @@ function getEmployee(employeeId){
         Object.assign(data, {"id":employeeId});
     }
     $.ajax({
-        url: "http://localhost/php-employee-management-v1/src/library/employeeController.php",
+        url: "../../src/library/employeeController.php",
         type: "GET",
         data: data,
         dataType: "json"
